@@ -31,11 +31,19 @@ main{
 .conteiner-img{
     display: flex;
     justify-content: center;
+ 
     width: 340px;
     height: 90px;
     padding: 5px 5px 5px 5px;
     /* background: red; */
 }
+.picture__img{
+   overflow: hidden;
+   object-fit: cover; 
+   width: 340px;
+   height: 90px;
+}
+
 .img-motoboy{
   width: 75%;
 }
