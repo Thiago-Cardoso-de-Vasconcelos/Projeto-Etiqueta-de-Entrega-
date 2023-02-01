@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiqueta de Entrega</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main>
+    <div class="conteiner-remetente">
+            <label class="picture"  for="picture__input" tabindex="0">
+            <input type="file" accept="image/*" id="picture__input" class="picture__input">
+            <samp class="picture__img"></samp>
+            </label>
+
+            <h1>REMETENTE:</h1>
+            <div class="conteiner-inpt"> 
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" autocomplete="name">
+            </div>
+               
+            <div class="conteiner-inpt"> 
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" autocomplete="address-line1">
+                
+                <label for="">N:</label>
+                <input type="text" class="input-numero">
+            </div>  
+          
+    
+            <div class="conteiner-inpt"> 
+                <label for="bairro">Bairro:</label>
+                <input type="text" id="bairro" autocomplete="address-level3">
+            </div>
+    
+            <div class="conteiner-inpt"> 
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" autocomplete="address-level2">
+            </div>
+
+            <div class="conteiner-inpt"> 
+                <label for="estado">Estado:</label>
+                <input type="text" id="estado" autocomplete="address-level1">
+            </div>
+               
+            <div class="conteiner-inpt"> 
+                <label for="cep">Cep:</label>
+                <input type="text" id="cep">
+            </div>     
+                     
+    </div>
+
+    <div class="conteiner-destinatario">
+            <div class="conteiner-img"><img  class="img-motoboy" src="envio-via-motoboy.jpg" alt=""></div>
+            <h1>Destinatario:</h1>
+                
+            <div class="conteiner-inpt"> 
+            <label for="destinatario-nome">Nome:</label>
+            <input type="text" id="destinatario-nome">
+            </div>
+           
+            
+
+            <div class="conteiner-inpt"> 
+            <label for="destinatario-endereco">Endereço:</label>
+            <input type="text" id="destinatario-endereco">
+                       
+
+            <label for="destinatario-numero">N:</label>
+            <input type="text"  id="destinatario-numero" class="input-numero">
+            </div>  
+            
+            <div class="conteiner-inpt"> 
+                <label for="destinatario-complemento">Complemento:</label>
+                <input type="text" id="destinatario-complemento">
+            </div>
+
+            <div class="conteiner-inpt"> 
+                <label for="destinatario-bairro">Bairro:</label>
+                <input type="text" id="destinatario-bairro">
+            </div>
+
+            <div class="conteiner-inpt"> 
+                <label for="destinatario-cidade">Cidade:</label>
+                <input type="text" id="destinatario-cidade">
+                <label for="destinatario-estado">Estado:</label>
+                <input type="text" id="destinatario-estado" class="input-estado">
+            </div>
+           
+            <div class="conteiner-inpt"> 
+                <label for="destinatario-cep">Cep:</label>
+                 <input name="cep" placeholder="Digite o cep primeiro" type="text" id="cep" value="" size="10" maxlength="9"
+               onblur="pesquisacep(this.value);" />
+                
+            </div>
+                 
+    </div>
+
+    <div class="info-extra">
+        <h2>Informações Extras para o Motoboy</h1>
+        <div class="conteiner-op-info-extra">
+            
+            <div>             
+                <div class="conteiner-inpt"> 
+                <label for="no-d">Nome do Destinatario:</label>
+                <input type="text" id="no-d" class="input-info-extra">
+                </div> 
+                <div class="conteiner-inpt"> 
+                <label for="celular">Celular do Destinatario:</label>
+                <input type="text" id="celular" class="input-info-extra">
+                </div>             
+            </div>
+
+            <div>
+
+                <select id="situacao-da-encomenda" class="situacao-da-encomenda">
+                <option value="situ"selected>--Situação da Encomenda--</option>
+
+                <option value="pago">Está Pago  <samp>&#9989;</samp> 
+                    <samp>&#128591;</samp></option>
+
+                <option value="cartao">Cobrar no cartão <samp>&#10071;</samp> 
+                    <samp>&#128179;</samp></option>
+
+                <option value="dinheiro">Cobrar em Dinheiro <samp>&#10071;</samp> 
+                    <samp>&#128181;</samp></option>
+
+                </select>
+
+                <div id="pai">
+            
+                <div id="pago"></div>
+
+                    <div class="conteiner-inpt-valor-cartao" id="cartao"> 
+                    <label for="valor-cartao">Valor:</label>
+                    <input type="text" value=" R$0,00" onkeyup="k(this);">
+                    </div> 
+
+                    <div class="conteiner-inpt-valor-dinheiro" id="dinheiro"> 
+                    <div class="conteiner-label-input">
+                    <label for="valor-dinheiro">Valor do Produto:</label>
+                    <input type="text" value=" R$0,00" onkeyup="k(this);" class="largura">
+                    </div>
+                    <div class="conteiner-label-input">
+                    <label for="troco">Troco Para:</label>
+                    <input type="text" value=" R$0,00" onkeyup="k(this);" class="largura">
+                    </div>
+                    <div class="conteiner-label-input">
+                    <label for="troco">Troco:</label>
+                    <input type="text" value=" R$0,00" onkeyup="k(this);" class="largura">
+                    </div>
+                    </div>
+                </div>      
+                         
+
+
+            </div>
+        </div>
+    </div>
+     <div class="conteiner-button">
+          <button class="button" id="btn-imprimir">Imprimir</button>
+     </div>
+    </main>
+
+
+<footer><p>Desenevolvido Por <a href="https://www.linkedin.com/in/thiago-vasconcelos-4a0980147/" target="_blank">Thiago Vasconcelos</a> <strong>&#128153;</strong></p></footer>
+<script src="script.js"></script>
+
+</body>
+</html>

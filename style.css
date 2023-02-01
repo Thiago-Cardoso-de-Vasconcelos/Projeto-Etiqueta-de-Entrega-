@@ -1,0 +1,256 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: inter;
+    
+}
+
+
+main{
+    /* background: red; */
+    width: 700px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns:50% 50%;
+    grid-template-areas: "con-rem con-des" "info-extra info-extra";
+    padding: 10px;
+    gap: 5px;
+}
+
+.conteiner-remetente {
+    grid-area: con-rem;
+    /* background: blueviolet; */
+    /* padding: 10px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.conteiner-img{
+    display: flex;
+    justify-content: center;
+    width: 340px;
+    height: 90px;
+    padding: 5px 5px 5px 5px;
+    /* background: red; */
+}
+.img-motoboy{
+  width: 75%;
+}
+
+.conteiner-destinatario {
+    grid-area: con-des;
+    /* background: rgb(62, 58, 66); */
+    /* padding: 10px; */
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.info-extra{
+    /* background:yellow; */
+    text-align: center;
+    grid-area: info-extra;
+    border: none;
+    border-top: 1px rgb(61, 61, 61) solid;
+    border-bottom: 1px rgb(61, 61, 61) solid;
+    border-left: 0px solid;
+    border-right: 0px solid;
+    border-style:dashed;
+}
+
+
+.input-numero {
+    width: 40px;
+}
+.input-estado{
+    width: 30px;
+}
+
+input{
+    border: none;
+    height: 20px;
+    width: 100%;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color: black;
+  -webkit-box-shadow: 0px 1000px #fff inset;
+}
+textarea:focus, input:focus {
+box-shadow: 0 0 0 0;
+outline: 0;
+}
+
+
+h1{
+    width: 100%;
+    margin: 5px;
+    text-align: center;
+    background: rgba(238, 238, 238, 0.342);
+    padding: 2px;
+    font-size: 24px;
+    
+}
+h2{
+   background: rgba(238, 238, 238, 0.342);
+    padding: 10px;
+}
+label{
+  font-weight: 700;  
+}
+.conteiner-inpt{
+    display: flex;
+    align-items: center;
+    padding: 1px;
+    gap: 5px;
+    width: 100%;
+    /* background: rgb(96, 255, 75); */
+
+}
+
+.conteiner-op-info-extra{
+    /* background: blue; */
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5px;
+    padding: 20px 0px;
+}
+.conteiner-op-info-extra>div{
+    /* background: rgb(216, 67, 216); */
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.input-info-extra{
+    width: 210px;
+}
+
+.conteiner-inpt-valor-cartao{
+    display: none;
+}
+.conteiner-inpt-valor-dinheiro {
+    display: none;
+    flex-direction: column;
+}
+.conteiner-label-input{
+    display: flex;
+}
+.largura{
+    width: 90px;
+}
+.add{
+    display: flex;
+    margin: 3px;
+    gap: 2px;
+
+}
+
+.situacao-da-encomenda{
+    border: 1px rgba(0, 0, 0, 0.103) solid;
+    border-radius: 5px;
+    padding: 2px;
+    background: rgba(238, 238, 238, 0.342);
+    color: rgb(0, 0, 0);
+    height: 30px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+.conteiner-button{
+    display: flex;
+    width: 700px;
+    justify-content: center;
+}
+
+.button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: black;
+    color: white;
+    font-weight: 400;
+    margin: 10px 5px;
+}
+.button:hover{
+    background: rgba(0, 0, 0, 0.877);
+}
+
+footer{
+    height: 35px;
+    padding: 10px;
+    width: 100%;
+    position:absolute;
+    bottom: 0px;
+    text-align: center;
+    background: rgba(235, 235, 235, 0.267);
+    opacity: .8;
+}
+
+
+.picture__input{
+    display: none;
+}
+.picture{
+    width: 340px;
+    height: 90px;
+    border: 1px dashed rgba(170, 170, 170, 0.5);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.247);
+    cursor: pointer;
+}
+.removeBorda{
+border:none;
+}
+
+.picture__img{
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.picture:hover{
+    background: rgba(214, 255, 255, 0.075);
+    color: rgba(0, 0, 0, 0.925);
+}
+
+
+
+a{
+  text-decoration:none;
+  color: black;
+}
+a:hover{
+  color: rgb(0, 19, 48);
+}
+
+@media print{
+    footer{
+        visibility: hidden;
+    }
+    .button{
+        visibility: hidden;
+    }
+}
