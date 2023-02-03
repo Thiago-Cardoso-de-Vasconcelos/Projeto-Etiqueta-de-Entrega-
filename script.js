@@ -4,11 +4,11 @@ function imprimir(){
   window.print();
 };
 
-/////
+
 
 const inputFile = document.querySelector("#picture__input");
 const pictureImage = document.querySelector(".picture__img");
-const pictureImageTxt = "Insira sua logo &#127753;"
+const pictureImageTxt = "Insira sua logo &#127753; 340px por 90px"
 pictureImage.innerHTML = pictureImageTxt;
 
 inputFile.addEventListener("change", function(e){
